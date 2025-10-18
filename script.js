@@ -1,7 +1,6 @@
 const startSelect = document.getElementById('start');
 const endSelect = document.getElementById('end');
 
-// Генерация времени с шагом 30 минут
 function generateTimeOptions() {
   const times = [];
   for (let h = 9; h <= 19; h++) {
@@ -40,7 +39,7 @@ document.getElementById('bookingForm').addEventListener('submit', function(e) {
     end: document.getElementById('end').value
   };
 
-  fetch('https://script.google.com/macros/s/AKfycbzkmXgEdvCtYSN35jQ4puIa1mByM-CA8_R9ZYNrb1w25BDcneuc5h-DB70NOEuKuyli/exec', {
+  fetch('https://script.google.com/macros/s/AKfycbwMEw8Lkl6lYHynlmklI5cGBuL60mTAuNDtTBrXoc5Si1WQdcELwRmaDyp6bL4bn27w/exec', {
     method: 'POST',
     body: JSON.stringify(data)
   })
