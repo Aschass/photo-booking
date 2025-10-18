@@ -39,7 +39,7 @@ document.getElementById('bookingForm').addEventListener('submit', function(e) {
     end: document.getElementById('end').value
   };
 
-  fetch('https://script.google.com/macros/s/AKfycbwMEw8Lkl6lYHynlmklI5cGBuL60mTAuNDtTBrXoc5Si1WQdcELwRmaDyp6bL4bn27w/exec', {
+  fetch('https://script.google.com/macros/s/AKfycbwzhLWUmmgmmohvoDAr8-vcp4Bg8dRy4Fxdo1w4izh6y5ZyeLsPtxol7sAXFtoTv_RX/exec?' + params.toString())
     method: 'POST',
     body: JSON.stringify(data)
   })
@@ -52,3 +52,4 @@ document.getElementById('bookingForm').addEventListener('submit', function(e) {
     alert('Ошибка при отправке: ' + error);
   });
 });
+
